@@ -1,0 +1,50 @@
+.section { background: var(--bg-alt); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+  position: relative;
+}
+.step {
+  position: relative;
+  padding: 2rem 1.5rem;
+}
+.stepNum {
+  font-size: var(--text-5xl);
+  font-weight: 800;
+  background: linear-gradient(180deg, rgba(168,85,247,0.2), transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+}
+.stepIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-xl);
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 0 30px rgba(168,85,247,0.3);
+}
+.stepTitle {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.stepDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+.connector {
+  display: none;
+}
+@media (max-width: 768px) {
+  .steps { grid-template-columns: 1fr; gap: 1rem; }
+}

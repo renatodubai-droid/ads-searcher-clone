@@ -1,0 +1,76 @@
+.section {
+  padding: 4rem 0 6rem;
+}
+.banner {
+  position: relative;
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.08) 0%, var(--surface) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--radius-2xl);
+  padding: 5rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow-lg);
+}
+.glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 250px;
+  background: radial-gradient(ellipse, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+.badgeItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+.badgeIcon {
+  color: var(--success);
+}
+@media (max-width: 640px) {
+  .banner {
+    padding: 3rem 1.25rem;
+  }
+  .badges {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

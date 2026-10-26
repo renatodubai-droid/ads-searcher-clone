@@ -1,0 +1,29 @@
+.section { padding: 3rem 0 4rem; }
+.label {
+  font-size: var(--text-sm);
+  color: var(--text-dim);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+.ticker {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+.track {
+  display: flex;
+  gap: 3rem;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+.brand {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-dim);
+  white-space: nowrap;
+  transition: color var(--duration) var(--ease);
+  letter-spacing: -0.01em;
+}
+.brand:hover { color: var(--text-secondary); }
